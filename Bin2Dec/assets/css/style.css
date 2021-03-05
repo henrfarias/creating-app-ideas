@@ -1,0 +1,135 @@
+:root {
+  --font-size-default: 10px;
+  --font-text: 'Poppins', sans-serif; 
+
+  font-size: var(--font-size-default);
+  font-family: var(--font-text);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #4D4D4D;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 15rem);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #383838; 
+  width: 100%;
+  height: 15rem;
+  color: white;
+  font-weight: 600;
+  font-size: 5rem;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  
+  position: relative;
+
+  min-height: 20rem;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 60px rgba(248, 248, 248, 0.05); 
+
+}
+
+span {
+  margin-top: 0.4rem;
+  margin-left: 2rem;
+  align-self: start;
+
+  color: #AAA;
+}
+
+.span-error {
+  color: red;
+  font-weight: 600;
+} 
+
+.converter__label {
+  position: absolute;
+  top: 1rem;
+  
+  margin-left: 2rem;
+  font-size: 2rem;
+  font-weight: lighter;
+}
+
+.container__converter {
+  display: flex;
+  align-items: center;
+}
+
+.container__converter input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2rem;
+  padding: 2.5rem 0;
+  font-size: 2rem;
+  text-align: center;
+  letter-spacing: 1rem;
+  border-radius: 5px;
+}
+
+.container__converter input::placeholder {
+  font-size: 2rem;
+  text-align: center;
+  letter-spacing: 1rem;
+}
+
+.container__converter button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  border: none;
+  border-radius: 5px;
+  background: white;
+  opacity: 0.5;
+  padding: 0.5rem;
+  transition: all 100ms;
+}
+
+.container__converter button img {
+  width: 4rem;
+}
+
+.container__converter button:not([disabled]) {
+  opacity: 1;
+  cursor: pointer;
+}
+.container__converter button:not([disabled]):hover 
+{
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05); 
+  background: gainsboro;
+}
+
+.input-error {
+  border: 1px solid red;
+  outline: red;
+}
+
+.hide {
+  display: none;
+}
+

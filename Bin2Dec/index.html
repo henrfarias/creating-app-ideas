@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+  <head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Bin2Dec</title>
+    <link rel='preconnect' href='https://fonts.gstatic.com'>
+    <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Rajdhani&display=swap' rel='stylesheet'>
+    <link rel='stylesheet' href='./assets/css/style.css'>
+  </head>
+  <body>
+    <header class='header'>Bin2Dec</header> 
+    <main>
+      <div class='container'>
+        <div class='container__converter'>
+          <div class='container__bin'>
+            <label class='converter__label' for='binary-input'>Binário</label>
+            <input id='binary-input' type='text' maxlength="8" placeholder='00000000' data-binary-input>
+          </div>
+          <button type='button' data-button disabled><img src='./assets/icons/convert-arrow.svg' alt='Converter de binário para decimal'></button>
+          <div class='container__dec'>
+            <label class='converter__label' for='decimal-input'>Decimal</label>
+            <input id='decimal-input' type='number' data-decimal-input>
+          </div>
+        </div>
+        <span class='span-help' data-span-help>*Digite o número binário com 8 dígitos</span>      
+        <span class='span-error hide' data-span-error>*Número inválido;</span>      
+      </div>
+    </main>
+    <footer></footer>
+
+    <script type='module' src='./assets/js/App.js'>
+    </script>
+  </body>
+</html>
