@@ -52,6 +52,11 @@ main {
 
 }
 
+input { 
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+}
+
 span {
   margin-top: 0.4rem;
   margin-left: 2rem;
