@@ -1,0 +1,81 @@
+.form-date {
+  display: flex;
+  flex-direction: column;
+
+  background-color: white;
+
+  width: clamp(300px, 90vw, 600px);
+  padding: 2.5rem 5rem;
+  margin-top: 1rem;
+
+  border: 2px solid #711AE2;
+  border-radius: 5px;
+  background-color: rgb(114, 114, 114);
+
+  box-shadow: 0 0 10px rgba(250, 250, 250, 0.05)
+}
+
+.form-date h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+
+  line-height: 3rem;
+  padding: 0 5rem;
+  margin-bottom: 1.4rem;
+}
+
+.form-date label {
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+}
+
+.form-date input {
+  font-size: 1.6rem;
+
+  height: 5rem;
+  border-radius: 5px;
+  border: 1px solid white;
+  outline: none;
+  background-color: transparent;
+  transition: all 200ms;
+
+  padding-left: 1rem;
+  margin-bottom: 0.7rem;
+}
+
+.form-date input::placeholder {
+  color: white;
+  font-weight: 600;
+}
+
+.form-date input:focus {
+  border: 1px solid #711AE2;
+  background-color: rgba(113, 26, 226, 0.1);
+}
+
+.form-date button {
+  height: 5rem;
+  width: clamp(200px, 60%, 400px);
+
+  margin: 0.7rem auto;
+
+  background-color: #711AE2;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 700;
+  transition: all 100ms;
+}
+
+.form-date button:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+  background-color: #670AE0;
+}
+
+
+
+
+
