@@ -1,3 +1,5 @@
+import { View } from './View.js'; 
+
 const Countdown = {
   timeLeft: 0,
   daysLeft: 0,
@@ -22,11 +24,16 @@ const Countdown = {
   countdown() {
     Countdown.timeLeft = Countdown.timeLeft - 1;
     Countdown.calcTimer(Countdown.timeLeft);
-    console.log(`Faltam ${Countdown.daysLeft} dias - ${Countdown.hoursLeft} h - ${Countdown.minutesLeft} min - ${Countdown.secondsLeft} s`);
+    if (Countdown.timeLeft === -1) {
+      
+      clearInterval(Countdown.interval);
+      return;
+    }
+    View.render();
   },
 
   init() {
-    setInterval(this.countdown, 1000);
+    Countdown.interval = setInterval(Countdown.countdown, 1000);
   },
 }
 
