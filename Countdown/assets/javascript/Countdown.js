@@ -1,3 +1,4 @@
+import { App } from './App.js';
 import { View } from './View.js'; 
 
 const Countdown = {
@@ -25,7 +26,9 @@ const Countdown = {
     Countdown.timeLeft = Countdown.timeLeft - 1;
     Countdown.calcTimer(Countdown.timeLeft);
     if (Countdown.timeLeft === -1) {
-      
+      if (App.notificationPermission){
+        new Notification('Chegou a hora!')
+      }
       clearInterval(Countdown.interval);
       return;
     }
