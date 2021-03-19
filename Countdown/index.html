@@ -6,29 +6,33 @@
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <link rel='preconnect' href='https://fonts.gstatic.com'>
   <link href='https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;600;700&display=swap' rel='stylesheet'>
-  <link rel='stylesheet' href='./assets/css/style.css' />
-  <link rel='stylesheet' href='./assets/css/form.css' />
-  <link rel='stylesheet' href='./assets/css/list.css' />
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/card.css">
+  <link rel="stylesheet" href="./assets/css/buttons.css">
+  <link rel="stylesheet" href="./assets/css/modal.css">
   <title>Countdown</title>
 </head>
 <body>
   <main>
-    <form class='form-date'>
-        <h2>Insira aqui seus eventos mais importantes! Nós ajudamos você a contar os segundos</h2>
-        <label for="title">Título</label>
-        <input type='text' data-title-input placeholder='Qual o nome do evento?' id='title' />
-        <label for="date">Data</label>
-        <input type='datetime-local' data-date-input id='date' />
-          <button type='button' data-date-button>Confirmar</button> 
-      
-    </form>
-    <section class='container__events'>
-      <ul id='events'>
-        <!-- <li class='events__item'><p class='countdown'>147 dias 12h 22min 22s</p> - <p>Aniversário da Virgínia</p> - <p>02/12/2021</p></li> -->
-        <!-- <li class='events__item'><p>300 dias 12h 22min 22s</p> - <p>Aniversário do Henrique</p> - <p>04/02/2021</p></li> -->
-      </ul>
+    <div class="overlay" onclick='eventController.toggleModal(event)'>
+      <div class='modal-form'>
+        <img src='./assets/images/Plus.svg'/>
+        <h2>Criar um evento</h2>
+        <form class='form'>
+            <label for="title">Título</label>
+            <input type='text' data-title-input placeholder='Qual o nome do evento?' id='title' />
+            <label for="date">Data</label>
+            <input type='datetime-local' data-date-input id='date' />
+              <button type='button' class="modal__confirm-button" data-form-button disabled>Confirmar</button> 
+        </form>
+      </div>
+    </div>  
+    <section>
+      <button type='button' class='add-button' onclick='eventController.toggleModal(event)'><p>+</p></button>
     </section>
   </main>
-  <script type='module' src='./assets/javascript/App.js'></script>
+  <script src="./assets/javascript/Controller/EventController.js"></script>
+  <script src="./assets/javascript/Models/Modal.js"></script>
+  <script src="./assets/javascript/app.js"></script>
 </body>
 </html>

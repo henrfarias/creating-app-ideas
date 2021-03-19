@@ -21,7 +21,7 @@
 ### Bonus features: 
   🔲 O usuário pode salvar o evento para que ele persista nas sessões;
 
-  🔲 O usuário pode ver um alerta quando o evento é alcançado;
+  ✅ O usuário pode ver um alerta quando o evento é alcançado;
 
   🔲 O usuário pode especificar mais de um evento;
 

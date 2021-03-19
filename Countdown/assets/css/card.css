@@ -1,0 +1,63 @@
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 2rem;
+
+  width: clamp(300px, 75vw, 1080px);
+  min-height: 20rem;
+  background-color: rgb(233, 233, 233);
+  background-image: url(../images/Abstract-Envelope.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  border-radius: 10px;
+  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.card-empty {
+  filter: grayscale(1);
+}
+
+.card__countdown {
+  display: flex;
+  flex: 2;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.card__title {
+  display: flex;
+  flex: 1 2;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+  
+  max-width: 50%;
+
+  height: 100%;
+
+  color:rgb(233, 233, 233);
+  font-size: 2.5rem;
+}
+
+.countdown__time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
+  min-width: 10rem;
+  min-height: 10rem;
+
+  background: rgb(233, 233, 233);
+  color: #333;
+  border-radius: 10px;
+
+}
+
+.countdown__time strong {
+  font-size: 5rem;
+}
