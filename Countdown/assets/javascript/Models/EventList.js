@@ -1,4 +1,4 @@
-class ListEvents {
+class EventList {
   constructor() {
     
   }
