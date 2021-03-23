@@ -14,36 +14,25 @@
 </head>
 <body>
   <main>
-    <div class="overlay" onclick='eventController.toggleModal(event)'>
-      <div class='modal-form'>
+    <div class="overlay" data-overlay>
+      <div class='modal-form' data-modal>
         <img src='./assets/images/Plus.svg'/>
         <h2>Criar um evento</h2>
         <form class='form'>
             <label for="title">Título</label>
-            <input type='text' data-title-input placeholder='Qual o nome do evento?' id='title' />
+            <input type='text' data-title placeholder='Qual o nome do evento?' id='title' />
             <label for="date">Data</label>
-            <input type='datetime-local' data-date-input id='date' />
+            <input type='datetime-local' data-date id='date' />
               <button type='button' class="modal__confirm-button" data-form-button disabled>Confirmar</button> 
         </form>
       </div>
     </div>  
     <section>
-      <button type='button' class='add-button' onclick='eventController.toggleModal(event)'><p>+</p></button>
-      <div class="card card-empty">
-        <div class="card__countdown">
-          <div class="countdown__time"><strong>--</strong><p>Days</p></div>
-          <div class="countdown__time"><strong>--</strong><p>Hours</p></div>
-          <div class="countdown__time"><strong>--</strong><p>Minutes</p></div>
-          <div class="countdown__time"><strong>--</strong><p>Seconds</p></div>
-        </div>
-        <div class="card__title">
-          <h2>Has empty =(</h2>
-        </div>
+      <button type='button' class='add-button' data-button><p>+</p></button>
+      <div data-view>
       </div>
     </section>
   </main>
-  <script src="./assets/javascript/Controller/EventController.js"></script>
-  <script src="./assets/javascript/Models/Modal.js"></script>
-  <script src="./assets/javascript/app.js"></script>
+  <script type='module' src='./assets/javascript/app.js'></script>
 </body>
 </html>
