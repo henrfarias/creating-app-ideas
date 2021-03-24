@@ -1,3 +1,7 @@
+import Storage from './Storage.js';
+import CaptureDate from './CaptureDate.js';
+import Presentation from './Presentation.js'
+
 const Interface = {
   
   buttonAdd: document.querySelector('[data-button]'),
@@ -16,6 +20,9 @@ const Interface = {
     
     this.buttonSubmit.addEventListener('click', () => {
       this.mountEvent();
+      this.toggleModal();
+      Presentation.update();
+
     })
 
     this.overlay.addEventListener('click', (click) => {
@@ -44,10 +51,18 @@ const Interface = {
   },
 
   mountEvent() {
-    const title = this.inputs.title;
-    const date = this.inputs.date;
+    let title = this.inputs.title.value;
+    let date = this.inputs.date.value;
+    const eventsList = Storage.access();
+    if(CaptureDate.getDate(date)) {
+      return alert('Esta data já passou');
+    }
+    eventsList.push({title, date});
 
-    console.log();
+    Storage.putItem(eventsList);
+
+    this.inputs.title.value = '';
+    this.inputs.date.value = '';
   }
 
 // 2021-04-04T11:11

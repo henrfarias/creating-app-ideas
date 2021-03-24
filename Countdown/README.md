@@ -4,7 +4,7 @@
 
 ## User Stories: 
 
-  ✅ O usuário pode ver uma caixa de entrada de evento contendo um campo de nome de evento, um campo de data, uma hora opcional e um botão 'Iniciar';
+  🔲 O usuário pode ver uma caixa de entrada de evento contendo um campo de nome de evento, um campo de data, uma hora opcional e um botão 'Iniciar';
   
   ✅ O usuário pode definir o evento inserindo seu nome, a data programada para ocorrer e um horário opcional para o evento. Se a hora for omitida, presume-se que seja meia-noite na data do evento no fuso horário local.
   

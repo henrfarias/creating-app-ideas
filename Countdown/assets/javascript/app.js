@@ -9,6 +9,8 @@
 
   -- Countdown
 
+  --Update
+
 */
 
 import Presentation from './Presentation.js' 
@@ -21,8 +23,9 @@ const App = {
 
     const eventsList = JSON.parse(Storage.localStorage); 
 
-    Presentation.init(Storage.view, eventsList);
+    Presentation.init(eventsList);
     Interface.init();
+
   }
 
 

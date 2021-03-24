@@ -20,6 +20,10 @@
   filter: grayscale(1);
 }
 
+.card--done {
+  filter: saturate(0.5);
+}
+
 .card__countdown {
   display: flex;
   flex: 2;
@@ -61,3 +65,5 @@
 .countdown__time strong {
   font-size: 5rem;
 }
+
+
