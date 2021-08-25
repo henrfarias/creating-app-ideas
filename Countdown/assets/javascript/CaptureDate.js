@@ -3,7 +3,6 @@ const CaptureDate = {
   eventDay: 0,
   dateDiffInSeconds: 0,
 
-
   getDate(date) {
     this.today = Math.floor(Date.now() / 1000);
     this.eventDay = new Date(date).toLocaleDateString();
